@@ -1,0 +1,9 @@
+project: savantenvs/qgroundcontrol
+target: gps_protocol_fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gps_protocol_fuzz/testsuite
+cmds:
+  - cmd: /mayhem/gps_protocol_fuzz
+    libfuzzer: true
+    timeout: 10

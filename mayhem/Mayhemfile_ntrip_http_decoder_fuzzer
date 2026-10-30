@@ -1,0 +1,10 @@
+project: savantenvs/qgroundcontrol
+target: ntrip_http_decoder_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ntrip_http_decoder_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/ntrip_http_decoder_fuzzer
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/test/GPS/NTRIP/HTTP/Fuzz/NTRIPHttpDecoderFuzzer.dict

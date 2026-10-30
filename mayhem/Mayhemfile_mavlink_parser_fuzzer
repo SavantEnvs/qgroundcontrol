@@ -1,0 +1,10 @@
+project: savantenvs/qgroundcontrol
+target: mavlink_parser_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mavlink_parser_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/mavlink_parser_fuzzer
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/test/Fuzz/MAVLinkParserFuzzer.dict
