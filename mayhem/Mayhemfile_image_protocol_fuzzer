@@ -1,0 +1,9 @@
+project: savantenvs/qgroundcontrol
+target: image_protocol_fuzzer-mined-9d3ce2d
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/image_protocol_fuzzer-mined-9d3ce2d/testsuite
+cmds:
+  - cmd: /mayhem/image_protocol_fuzzer
+    libfuzzer: true
+    timeout: 10
